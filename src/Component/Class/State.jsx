@@ -1,33 +1,33 @@
-import React, { Component, useState } from 'react';
+import React from "react";
 
-class Counter extends Component {
-  constructor(props) {
-    super(props);
+
+
+class State extends React.Component{
+  constructor(props){
+    super(props)
     this.state = {
-      count: 0,
-      name: "navneet"
-    };
+      Inputvalue: '',
+    }
   }
-
-  handleClick = () => {
-    this.setState({ count: this.state.count + 1 });
- 
-  };
-  change = () =>{
-    this.setState({name: this.state.name + "bhuro"})
-    // this.setState({name: this.state.name})
+  hndlechange = (event) => {
+    this.setState({
+      Inputvalue: event.target.value
+    });
   }
-
-  render() {
-    return (
-      <div>
-        <h1>Count: {this.state.count}</h1>
-        <h1>Name: {this.state.name}</h1>
-        <button onClick={this.handleClick} >Increment</button>
-        <button onClick={this.change} >change</button>
-      </div>
-    );
+  change = () => {
+    alert(this.state.inputValue);
+  }
+  render(){
+    return(
+      <>
+    <input type="text" 
+      value={this.state.Inputvalue}
+      onChange={this.hndlechange}
+    />
+    <button onSubmit={this.change}>change</button>
+      </>
+    )
   }
 }
 
-export default Counter;
+export default State;
