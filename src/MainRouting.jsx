@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import Contect from "./Contect";
 
 const Class = React.lazy(() => import ('./Component/Class/ClassRouting'))
+const Functional = React.lazy(() => import('./Component/Functional/FunctionRouting'))
 const MainRouting = createBrowserRouter([
     {
         path: "/",
@@ -33,6 +34,10 @@ const MainRouting = createBrowserRouter([
                 path: "Class/*",
                 element: <Suspense fallback={<h2>Loading....</h2>}> <Class /> </Suspense>,
             },
+           {
+            path: "Functional/*",
+            element: <Suspense fallback={<h1>PLease WAit a Second</h1>}><Functional/></Suspense>
+           }
         ]
     },
 ])

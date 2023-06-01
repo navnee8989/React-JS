@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import ClassMenu from "./ClassMenu";
 import Props from "./Props";
 import ClassIntro from "./ClassIntro";
+import Controll from "./Controll"
+import Lifecycle from "./Lifecycle"
 import State from "./State";
 import StateLifting from "./StateLifting"
+import ConditionalRendring from "./ConditionalRendring"
 import { Route, Routes } from "react-router-dom";
 
 class ClassRouting extends Component{
@@ -16,6 +19,9 @@ class ClassRouting extends Component{
                             <Route path='Props' element={<Props/>}/>
                             <Route path='State' element={<State/>}/>
                             <Route path='StateLifting' element={<StateLifting/>}/>
+                            <Route path='ConditionalRendring' element={<ConditionalRendring/>}/>
+                            <Route path='Controll' element={<Controll/>}/>
+                            <Route path='Lifecycle' element={<Lifecycle/>}/>
                      </Route>
                 </Routes>
             </>

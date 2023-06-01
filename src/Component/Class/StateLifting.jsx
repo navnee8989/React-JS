@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+    width: 100%;
+    margin: 0 auto; 
+`;
+
 
 class ParentComponent extends Component {
   constructor(props) {
@@ -27,11 +34,11 @@ class ParentComponent extends Component {
 class ChildComponent extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <h2>Child Component</h2>
         <p>Counter: {this.props.counter}</p>
         <button onClick={this.props.incrementCounter}>Increment</button>
-      </div>
+      </Container>
     );
   }
 }

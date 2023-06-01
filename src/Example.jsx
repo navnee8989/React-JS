@@ -3,26 +3,48 @@ import Header from "./CommanComponent/Header";
 import { Link } from "react-router-dom";
 import "./App.css";
 import { Outlet } from "react-router-dom";
+import styled from "styled-components";
 
+const Title = styled.h1`
+        text-align: center;
+        color: black;
+        font-size: 30px;
+        margin-top: 50px;
+`;
+const Reactmanu = styled.div`
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: 0 auto;
+`;
+const ClassCompo = styled.div``;
+const Functioncompo = styled.div``;
+const View = styled.div`
+       width: 100%;
+       display: flex;
+       justify-content: flex-start;
+       background-color: red;
+
+`;
 const Example = () => {
     return(
         <>
             <Header />
 
-            <h1>Example Page</h1>
+            <Title><h1>Example Page</h1></Title>
 
 
-            <div className="EContainer">
+            <Reactmanu>
             
-                <div className="col-50"><Link to="Class">Class Component</Link></div>
-                <div className="col-50"><Link to="Function">Functional Component</Link></div>
+                <ClassCompo><Link to="Class">Class Component</Link></ClassCompo>
+                <Functioncompo><Link to="Functional">Functional</Link></Functioncompo>
            
-            </div>
-            <div className="row my-3">
-                    <div className="col">
+            </Reactmanu>
+            <View>
+                   
                         <Outlet></Outlet>
-                    </div>
-                </div>
+                    
+                </View>
         </>
     )
 }
