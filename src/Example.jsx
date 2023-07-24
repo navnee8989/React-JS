@@ -23,7 +23,7 @@ const View = styled.div`
        width: 100%;
        display: flex;
        justify-content: flex-start;
-       background-color: red;
+       /* background-color: red; */
 
 `;
 const Example = () => {

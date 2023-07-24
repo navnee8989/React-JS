@@ -3,14 +3,16 @@ import ClassMenu from "./ClassMenu";
 import Props from "./Props";
 import ClassIntro from "./ClassIntro";
 import Controll from "./Controll"
-import Lifecycle from "./Lifecycle"
+// import Lifecycle from "./Lifecycle"
 import State from "./State";
 import StateLifting from "./StateLifting"
 import ConditionalRendring from "./ConditionalRendring"
 import { Route, Routes } from "react-router-dom";
-
+import Lifecycle from "./Lifecycle/Lrouting"
+import Uncontroll from "./Uncontroll";
 class ClassRouting extends Component{
     render(){
+       
         return(
             <>
                 <Routes>
@@ -21,7 +23,9 @@ class ClassRouting extends Component{
                             <Route path='StateLifting' element={<StateLifting/>}/>
                             <Route path='ConditionalRendring' element={<ConditionalRendring/>}/>
                             <Route path='Controll' element={<Controll/>}/>
-                            <Route path='Lifecycle' element={<Lifecycle/>}/>
+                            <Route path='Uncontroll' element={<Uncontroll/>}/>
+                            <Route path='Lifecycle/*' element={<Lifecycle/>}/>
+                            
                      </Route>
                 </Routes>
             </>
